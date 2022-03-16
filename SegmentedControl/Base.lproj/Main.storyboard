@@ -35,6 +35,15 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="w43-6L-Wvg">
+                                <rect key="frame" x="44" y="338" width="314" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="29" id="l5l-J6-KRe"/>
+                                </constraints>
+                                <connections>
+                                    <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="KcN-zI-okZ"/>
+                                </connections>
+                            </slider>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
@@ -43,13 +52,17 @@
                             <constraint firstItem="TtF-hq-X25" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="4ny-Fl-dso"/>
                             <constraint firstItem="rYQ-d9-nSa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="C8p-WS-U0q"/>
                             <constraint firstItem="TtF-hq-X25" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="IOM-Qy-jGI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w43-6L-Wvg" secondAttribute="trailing" constant="58" id="KSi-1P-x0D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TtF-hq-X25" secondAttribute="trailing" constant="58" id="O4w-O2-6Bx"/>
+                            <constraint firstItem="w43-6L-Wvg" firstAttribute="top" secondItem="rYQ-d9-nSa" secondAttribute="bottom" constant="85.5" id="Zis-cq-d7Y"/>
+                            <constraint firstItem="w43-6L-Wvg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="eFa-2T-xuO"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rYQ-d9-nSa" secondAttribute="trailing" constant="83" id="xPe-FR-RCP"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="label" destination="rYQ-d9-nSa" id="p3g-rf-JUN"/>
                         <outlet property="segmetedControl" destination="TtF-hq-X25" id="WEP-ST-vp8"/>
+                        <outlet property="slider" destination="w43-6L-Wvg" id="f0U-7L-1l9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

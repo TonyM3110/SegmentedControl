@@ -11,17 +11,26 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var segmetedControl: UISegmentedControl!
-    
+    @IBOutlet weak var slider: UISlider!
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        label.isHidden = true
+        slider.value = 1
+        
+        label.text = String(slider.value)
         label.font = label.font.withSize(35)
         //label.numberOfLines = 2 - лучше ставить в сториборд на 0, чтобы лэйбл растягивался
         
         segmetedControl.insertSegment(withTitle: "Third", at: 2, animated: true)
+        
+        //slider set up
+        slider.minimumValue = 0
+        slider.maximumValue = 1
+        slider.minimumTrackTintColor = .yellow
+        slider.maximumTrackTintColor = .red
+        slider.thumbTintColor = .blue
         
     }
 
@@ -44,6 +53,16 @@ class ViewController: UIViewController {
             print("SMTH Wrong!!!!")
         }
     }
+    
+    @IBAction func sliderAction(_ sender: UISlider) {
+        
+        label.text = String(sender.value)
+        //прозрачность вью
+        let backgoundColor = self.view.backgroundColor
+        self.view.backgroundColor = backgoundColor?.withAlphaComponent(CGFloat(sender.value))
+        
+    }
+    
     
     
 }
