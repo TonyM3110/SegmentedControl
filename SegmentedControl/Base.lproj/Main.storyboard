@@ -44,18 +44,39 @@
                                     <action selector="sliderAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="KcN-zI-okZ"/>
                                 </connections>
                             </slider>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter your name" textAlignment="natural" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="n6A-13-rvx">
+                                <rect key="frame" x="46" y="451" width="310" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w8Y-5Y-9q9">
+                                <rect key="frame" x="46" y="586" width="310" height="31"/>
+                                <color key="backgroundColor" systemColor="linkColor"/>
+                                <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Done"/>
+                                <connections>
+                                    <action selector="donePressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="AuV-nO-h9t"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="rYQ-d9-nSa" firstAttribute="top" secondItem="TtF-hq-X25" secondAttribute="bottom" constant="89" id="45g-IU-wMy"/>
                             <constraint firstItem="TtF-hq-X25" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="4ny-Fl-dso"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="n6A-13-rvx" secondAttribute="trailing" constant="58" id="62F-Gv-sge"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w8Y-5Y-9q9" secondAttribute="trailing" constant="58" id="Bxh-0g-Ero"/>
                             <constraint firstItem="rYQ-d9-nSa" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="C8p-WS-U0q"/>
                             <constraint firstItem="TtF-hq-X25" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="69" id="IOM-Qy-jGI"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="w43-6L-Wvg" secondAttribute="trailing" constant="58" id="KSi-1P-x0D"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="TtF-hq-X25" secondAttribute="trailing" constant="58" id="O4w-O2-6Bx"/>
+                            <constraint firstItem="n6A-13-rvx" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="WSJ-Z4-kKU"/>
                             <constraint firstItem="w43-6L-Wvg" firstAttribute="top" secondItem="rYQ-d9-nSa" secondAttribute="bottom" constant="85.5" id="Zis-cq-d7Y"/>
+                            <constraint firstItem="n6A-13-rvx" firstAttribute="top" secondItem="w43-6L-Wvg" secondAttribute="bottom" constant="84" id="cbb-31-EQl"/>
                             <constraint firstItem="w43-6L-Wvg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="eFa-2T-xuO"/>
+                            <constraint firstItem="w8Y-5Y-9q9" firstAttribute="top" secondItem="n6A-13-rvx" secondAttribute="bottom" constant="101" id="iZq-fe-AiA"/>
+                            <constraint firstItem="w8Y-5Y-9q9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="46" id="nYu-dG-HAS"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="rYQ-d9-nSa" secondAttribute="trailing" constant="83" id="xPe-FR-RCP"/>
                         </constraints>
                     </view>
@@ -63,6 +84,7 @@
                         <outlet property="label" destination="rYQ-d9-nSa" id="p3g-rf-JUN"/>
                         <outlet property="segmetedControl" destination="TtF-hq-X25" id="WEP-ST-vp8"/>
                         <outlet property="slider" destination="w43-6L-Wvg" id="f0U-7L-1l9"/>
+                        <outlet property="textField" destination="n6A-13-rvx" id="PI6-2T-ecw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -71,6 +93,9 @@
         </scene>
     </scenes>
     <resources>
+        <systemColor name="linkColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

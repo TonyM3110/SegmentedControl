@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var label: UILabel!
     @IBOutlet weak var segmetedControl: UISegmentedControl!
     @IBOutlet weak var slider: UISlider!
-    
+    @IBOutlet weak var textField: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,6 +64,29 @@ class ViewController: UIViewController {
     }
     
     
+    @IBAction func donePressed(_ sender: UIButton) {
+        
+        guard textField.text?.isEmpty == false else { return }
+        
+        if let _ = Double(textField.text!) {
+            
+            let alert = UIAlertController(title: "Wrong Name Format!", message: "Enter your name again, please", preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "Ok", style: .default, handler: nil)
+            
+            alert.addAction(alertAction)
+            
+            present(alert, animated: true, completion: nil)
+            
+            print ("Name format is wrong")
+        } else {
+            label.text = textField.text
+            // если формат неверный то очищает текст филд
+            textField.text = nil
+        }
+        
+        
+        
+    }
     
 }
 
